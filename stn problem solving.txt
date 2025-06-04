@@ -1,0 +1,134 @@
+1.Create an array of objects, each representing a person with properties like name, age, and gender. Write a function to filter out all females and then map the remaining people to an array of names. Print the final result.
+
+const people = [
+  { name: "Rakib", age: 25, gender: "Male" },
+  { name: "Tania", age: 22, gender: "Female" },
+  { name: "Hasan", age: 30, gender: "Male" },
+  { name: "Nusrat", age: 28, gender: "Female" },
+  { name: "Shuvo", age: 26, gender: "Male" },
+  { name: "Mitu", age: 24, gender: "Female" }
+];
+
+const filterFemale = (people) => {
+  const person = people.filter(obj => (obj.gender !== "Female")).map(data=>(data.name))  
+  console.log(person)
+}
+
+filterFemale(people)
+
+2.-Create an array of objects representing books with properties like title, author, and year. Write a function that takes the array and returns a new array with only the book titles. Print the result.
+
+const books = [
+  { title: "To Kill a Mockingbird", author: "Harper Lee", year: 1960 },
+  { title: "1984", author: "George Orwell", year: 1949 },
+  { title: "The Great Gatsby", author: "F. Scott Fitzgerald", year: 1925 },
+  { title: "Pride and Prejudice", author: "Jane Austen", year: 1813 },
+  { title: "The Hobbit", author: "J.R.R. Tolkien", year: 1937 },
+  { title: "The Catcher in the Rye", author: "J.D. Salinger", year: 1951 }
+];
+
+const findBookTitle = (books) => {
+  const result = books.map(book => (book.title))
+  console.log(result)
+  return result;
+}
+findBookTitle(books)
+
+3.Write three functions: one to square a number, one to double a number, and one to add 5 to a number. Compose these functions to create a new function that squares a number, doubles the result, and then adds 5.
+
+
+const square = (data) => {
+  return Math.pow(data, 2);
+};
+const double = (data) => {
+  return data*2
+}
+const addFive = (data) => {
+  return data+5
+}
+
+const finalFunction = (data) => {
+ const squareData= square(data)
+  const doubleData = double(squareData)
+  console.log(addFive(doubleData))
+  return result=addFive(doubleData)
+}
+
+finalFunction(5)
+
+4.//-Create an array of objects representing cars with properties like make, model, and year. Write a function to sort the array of cars by the year of manufacture in ascending order. Print the sorted array.
+
+const cars = [
+  { make: "Toyota", model: "Corolla", year: 2020 },
+  { make: "Honda", model: "Civic", year: 2019 },
+  { make: "Ford", model: "Mustang", year: 2021 },
+  { make: "Tesla", model: "Model 3", year: 2022 },
+  { make: "BMW", model: "X5", year: 2018 },
+  { make: "Audi", model: "A4", year: 2020 }
+];
+
+const sortedCar = (cars) => {
+  const result = cars.sort((a, b) => (a.year - b.year))
+  console.log(result)
+}
+sortedCar(cars)
+
+5.//Write a function that searches an array of objects for a specific person by name. If found, modify their age property. Print the updated array.
+
+const persons = [
+  { name: "Rakib", age: 25, gender: "Male" },
+  { name: "Tania", age: 22, gender: "Female" },
+  { name: "Hasan", age: 30, gender: "Male" },
+  { name: "Nusrat", age: 28, gender: "Female" },
+  { name: "Shuvo", age: 26, gender: "Male" },
+  { name: "Mitu", age: 24, gender: "Female" }
+];
+
+const updateAge = (persons,newName,newAge) => {
+  const findPersone = persons.find(person => (person.name === `${newName}`))
+  if (findPersone) {
+   findPersone.age = newAge ;
+  }
+  console.log(persons)
+}
+
+const newName = "Shuvo"
+const newAge=29 
+
+updateAge(persons,newName,newAge)
+
+6.//-Create an array of numbers. Write a function that uses the reduce method to calculate the sum of all even numbers in the array.
+
+const number = [1, 21, 45, 12, 25, 48, 3, 11, 17]
+
+const calculateSum = (number) =>{
+  const result = number.reduce((accu, current) => {
+    if (current%2 == 0) {
+      
+      return accu + current;
+    } else {
+     console.log(accu)
+      return accu
+    }
+  },0)
+  
+  console.log(result)
+  if (result === 0) {
+    console.log("No even number found");
+  } else {
+    console.log("Sum of even numbers:", result);
+  }
+  
+}
+calculateSum(number)
+
+7.//-Write a function that determines whether a given year is a leap year.
+
+const leapYear = (year) => {
+  if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
+    console.log("Year is a Leap Year");
+  } else {
+    console.log("Year is NOT a Leap Year");
+  }
+}
+leapYear(1600)
