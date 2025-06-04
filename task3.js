@@ -14,8 +14,8 @@ const addFive = (data) => {
 const finalFunction = (data) => {
  const squareData= square(data)
   const doubleData = double(squareData)
-  console.log(addFive(doubleData))
-  return result=addFive(doubleData)
+  return addFive(doubleData)
 }
 
-finalFunction(5)
+const result=finalFunction(5)
+console.log(result)

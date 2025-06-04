@@ -11,6 +11,7 @@ const cars = [
 
 const sortedCar = (cars) => {
   const result = cars.sort((a, b) => (a.year - b.year))
-  console.log(result)
+  return result
 }
-sortedCar(cars)
+const result = sortedCar(cars)
+console.log(result)

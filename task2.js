@@ -11,7 +11,7 @@ const books = [
 
 const findBookTitle = (books) => {
   const result = books.map(book => (book.title))
-  console.log(result)
   return result;
 }
-findBookTitle(books)
+const result=findBookTitle(books)
+console.log(result)

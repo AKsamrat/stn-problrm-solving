@@ -8,17 +8,17 @@ const calculateSum = (number) =>{
       
       return accu + current;
     } else {
-     console.log(accu)
+    //  console.log(accu)
       return accu
     }
   },0)
   
-  console.log(result)
-  if (result === 0) {
-    console.log("No even number found");
-  } else {
-    console.log("Sum of even numbers:", result);
-  }
+  return result 
   
 }
-calculateSum(number)
+const result = calculateSum(number)
+if (result === 0) {
+  console.log("No even number found");
+} else {
+  console.log("Sum of even numbers:", result);
+}

@@ -11,7 +11,8 @@ const people = [
 
 const filterFemale = (people) => {
   const person = people.filter(obj => (obj.gender !== "Female")).map(data=>(data.name))  
-  console.log(person)
+  return person
 }
 
-filterFemale(people)
+const result = filterFemale(people)
+console.log(result)

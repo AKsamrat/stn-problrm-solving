@@ -14,10 +14,11 @@ const updateAge = (persons,newName,newAge) => {
   if (findPersone) {
    findPersone.age = newAge ;
   }
-  console.log(persons)
+  return findPersone
 }
 
 const newName = "Shuvo"
 const newAge=29 
 
-updateAge(persons,newName,newAge)
+const updateAges = updateAge(persons, newName, newAge)
+console.log(persons)

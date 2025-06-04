@@ -2,9 +2,10 @@
 
 const leapYear = (year) => {
   if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
-    console.log("Year is a Leap Year");
+    return("Year is a Leap Year");
   } else {
-    console.log("Year is NOT a Leap Year");
+    return("Year is NOT a Leap Year");
   }
 }
-leapYear(1600)
+const result = leapYear(1600)
+console.log(result)
